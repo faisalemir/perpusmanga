@@ -1,0 +1,290 @@
+body {
+    margin:0;
+    padding:0;
+	background-color:#eeeeee;
+	padding-top:30px;
+    font-size:14px;
+    font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	}
+input, select {
+	padding:6px;
+    border:solid 1px #bdc3c7;
+	}
+a {
+    text-decoration:none;
+	}
+
+/*Header*/
+.header {
+	position:fixed;
+	background-color: #1FAEFF;
+	height: 40px;
+	-webkit-box-shadow: 0px 1px 5px #000000;
+	box-shadow: 0px 1px 7px #000000;
+	width:100%;
+	z-index:10;
+	margin-top:-30px;
+	}
+.in_menu {
+	display:inline;
+	float:left;
+	}
+#title {
+	font-size:30px;
+	margin: 0px 15px 0px 15px;
+	line-height: 35px;
+	color: white;
+	font-family: ONRAMP;
+	transition: color 0.2s;
+	}
+#title:hover {
+	color: #ecf0f1;
+	}
+#h_ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	}
+.h_li {
+	display:inline-block;
+	vertical-align:middle;
+	float:left;
+	}
+.a_menu {
+	vertical-align: top;
+	cursor:pointer;
+	}
+.div_menu, #div_menu1 {
+	text-align:center;
+	width:100px;
+	padding: 8px 15px 9px 15px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	color: #ecf0f1;
+	transition: color 0.1s, text-shadow 0.1s, background-color 0.1s;
+	font-size:16px;
+    }
+.div_menu:hover{
+	text-shadow: 0px -1px 0px #000000;
+	background-color:#3498db;
+	color:white;
+	}
+.div_menu2 {
+	text-align:left;
+	padding: 8px 20px 8px 20px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	color: #ecf0f1;
+	transition: color 0.1s, text-shadow 0.1s;
+	}
+.div_menu2:hover {
+	text-shadow: 0px 0px 1px #000000;
+	background-color:#f1c40f;
+	color:white;
+	}
+#tbl_menu {
+	margin:0;
+	padding:0;
+	border-collapse:collapse;
+	vertical-align:top;
+    border-radius: 0 0 5px 5px;
+	}
+#brm {
+    border-radius: 0 0 5px 5px;
+    }
+#tbl_menu:hover {
+	background-color:#3498db;
+	}
+#tr_show {
+	text-shadow:none;
+	}
+.div_cari {
+    float:right; 
+    background-color:#ecf0f1; 
+    margin:4px 4px 0 0;
+    }
+.tbx_cari {
+	width: 350px;
+	background-color:#ecf0f1;
+	transition: background-color 0.5s;
+    border: none;
+	}
+.tbx_cari:focus {
+	background-color:white;
+	}	
+.btn_cari {
+    font-size: 14px;
+    padding: 6px 15px 6px 15px;
+    background-color:#2980b9;
+    color:white;
+    transition:background-color 0.3s;
+    cursor:pointer;
+    border:none;
+    }
+.btn_cari:hover {
+    background-color:#7f8c8d;
+    }
+
+/*Layout*/
+.layout {
+	margin: auto;
+	background-color:#2c3e50;
+	width: 1000px;
+	box-shadow: 0 1px 10px #C2C2C2;
+	-webkit-box-shadow: 0 1px 10px #C2C2C2;
+	border-radius: 8px 8px 0 0;
+	margin-top:-60px;
+	position:relative;
+	z-index:3;
+	}
+.titlebar {
+	position:absolute;
+	font-family:manteka;
+	top:-65px;
+	left:30px;
+	font-size:30px;
+	color:white;
+	text-shadow: 0 0px 30px #f1c40f;
+	}
+.titlebar:before {
+	content: url(../img/logo.png);
+	}
+.content {
+	background-color:white;
+	border-radius: 8px;
+	min-height:300px;
+	padding:0 30px 30px 30px;
+	overflow:auto;
+	}
+.footer {
+	line-height:100px;
+	height:70px;
+	text-align:center;
+	color:white;
+	font-size:12px;
+	}
+#judul {
+	color:#7f8c8d;
+	font-size:28px;
+	}
+#judul:before {
+	margin-right:12px;
+	vertical-align: middle;
+	content: url(../img/logo_judul.png);
+	}
+
+/*Tombol Kiri atas layout*/
+.btn_tambah, .btn_kembali, .btn_sunting, .btn_simpan, .btn_history {
+    font-size: 14px;
+    float:right;
+    padding: 7px 15px 7px 15px;
+    background-color:#FF1D77;
+    color:white;
+    transition:background-color 0.3s;
+    position:relative;
+    top:25px;
+    cursor:pointer;
+    border:none;
+    }
+.btn_tambah:hover, .btn_kembali:hover, .btn_sunting:hover, .btn_simpan:hover, .btn_history:hover {
+    background-color:#f1c40f;
+    }
+.btn_hapus {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    font-size: 14px;
+    float:none;
+    padding: 7px 15px 7px 15px;
+    background-color:#f1c40f;
+    color:white;
+    transition:background-color 0.3s;
+    position:relative;
+    top:25px;
+    cursor:pointer;
+    left: 0px;
+}
+.btn_hapus:hover {
+    background-color:#AE113D;
+    }
+
+/*GridView Style Start*/
+.mGrid {   
+    width: 100%;   
+    background-color: #fff;   
+    margin: 5px 0 10px 0;   
+    border: solid 1px inherit;   
+    border-collapse:collapse;   
+}  
+.mGrid td {   
+    padding: 2px;   
+    border: solid 1px #c1c1c1;   
+    color: #717171;   
+}  
+.mGrid th {   
+    padding: 8px 2px;   
+    color: #fff;   
+    background-color: #3498db;   
+    border-left: solid 1px white;   
+    font-size: 0.9em;   
+}  
+.mGrid .alt { background-color: #ecf0f1; }  
+.mGrid .pgr { background-color: #3498db; }  
+.mGrid .pgr table { margin: 5px 0; }  
+.mGrid .pgr td {   
+    border-width: 0;   
+    padding: 4px 6px;   
+    font-weight: bold;   
+    color: yellow;   
+    line-height: 12px;   
+    border-radius: 0 0 8px 8px;
+ }     
+.mGrid .pgr a { color: #ecf0f1; text-decoration: none; }  
+.mGrid .pgr a:hover { color: white; text-decoration: none; }  
+/*GridView Style End*/
+
+/*LOGIN*/
+.login {
+    margin-top:20px;
+    width:168px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    }
+.lbl_login {
+    
+    }
+.btn_login {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    font-size: 14px;
+    padding: 7px 15px 7px 15px;
+    background-color:#f1c40f;
+    color:white;
+    transition:background-color 0.3s;
+    cursor:pointer;
+
+}
+.btn_login:hover {
+    background-color:#AE113D;
+    }
+.list {
+    padding:0;
+    margin:0;
+    }
+.list li {
+    display:inline-block;
+    list-style-type:none;
+    background-color:#34495e;
+    color:white;
+    padding: 0 5px 0 5px;
+    margin:0 5px 5px 0;
+    }
+
+/*Lain*/
+.cbl_kategori {
+    text-align:left;
+    }
+
+td {
+    vertical-align:top;
+   }

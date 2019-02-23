@@ -1,0 +1,104 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Manga.master.vb" Inherits="Perpustakaan_Manga.Manga" %>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Manga</title>
+<asp:ContentPlaceHolder ID="cph_head" runat="server"></asp:ContentPlaceHolder>
+<script lang="javascript">
+    $(function () {
+        var p = $('#content').responsiveSlides({
+            height: 400,				// background color and color of overlayer to fadeout on init
+            autoStart: true,					// boolean autostart
+            startDelay: 0,					// start whit delay
+            effectInterval: 5000,			// time to swap photo
+            effectTransition: 1000
+        });
+
+    });
+</script>
+<script>
+    function show() {
+        document.getElementById('tr_hide1').style.display = '';
+        document.getElementById('tr_hide2').style.display = '';
+        document.getElementById('tr_hide3').style.display = '';
+        document.getElementById('tr_hide4').style.display = '';
+        document.getElementById('tr_hide5').style.display = '';
+        document.getElementById('tr_hide6').style.display = '';
+        document.getElementById('tr_show').style.textShadow = '0px -1px 0px #000000';
+        document.getElementById('div_menu1').style.color = 'white';
+    }
+    function hide() {
+        document.getElementById('tr_hide1').style.display = 'none';
+        document.getElementById('tr_hide2').style.display = 'none';
+        document.getElementById('tr_hide3').style.display = 'none';
+        document.getElementById('tr_hide4').style.display = 'none';
+        document.getElementById('tr_hide5').style.display = 'none';
+        document.getElementById('tr_hide6').style.display = 'none';
+        document.getElementById('tr_show').style.textShadow = 'none';
+        document.getElementById('div_menu1').style.color = '#ecf0f1';
+    }
+</script>
+</head>
+
+<body onLoad="hide()">
+    <form id="frm_master" runat="server">
+    <nav class="header">
+        <asp:ContentPlaceHolder ID="cph_cari" runat="server"></asp:ContentPlaceHolder>
+    <!--<asp:TextBox ID="tbx_cari" runat="server" Width="291px" ToolTip="Cari disini. ."></asp:TextBox>-->
+        <div class="in_menu"><a id="title" href="../index.aspx"><b id="title_perpus">PERPUSTAKAAN</b>MANGA</a></div>
+        <ul class="in_menu" id="h_ul">
+            <li class="h_li"><a href="../daftarmanga.aspx"><div class="div_menu">Daftar Manga</div></a></li>
+           
+            <li class="h_li">
+            	<asp:Table id="tbl_menu" runat="server" onMouseOut="hide()" onMouseOver="show()">
+                	<asp:TableRow id="tr_show">
+                    	<asp:TableCell><a class="a_menu"><div id="div_menu1">Menu Admin</div></a></asp:TableCell>
+                    </asp:TableRow>
+                	<asp:TableRow id="tr_hide1">
+                    	<asp:TableCell ID="mn_admin"><a class="a_menu" href="../admin/admin.aspx"><div class="div_menu2">Admin</div></a></asp:TableCell>
+                    </asp:TableRow>
+                	<asp:TableRow id="tr_hide2">
+                    	<asp:TableCell><a class="a_menu" href="../admin/anggota.aspx"><div class="div_menu2">Anggota</div></a></asp:TableCell>
+                    </asp:TableRow>
+                	<asp:TableRow id="tr_hide5">
+                    	<asp:TableCell ID="mn_tarif"><a class="a_menu" href="../admin/denda.aspx"><div class="div_menu2">Denda</div></a></asp:TableCell>
+                    </asp:TableRow>
+                	<asp:TableRow id="tr_hide4">
+                    	<asp:TableCell><a class="a_menu" href="../admin/kategori.aspx"><div class="div_menu2">Kategori</div></a></asp:TableCell>
+                    </asp:TableRow>
+                	<asp:TableRow id="tr_hide3">
+                    	<asp:TableCell><a class="a_menu" href="../admin/buku.aspx""><div class="div_menu2">Manga</div></a></asp:TableCell>
+                    </asp:TableRow>
+                	<asp:TableRow id="tr_hide6">
+                    	<asp:TableCell><a class="a_menu" href="../admin/peminjaman.aspx"><div class="div_menu2" id="brm">Peminjaman</div></a></asp:TableCell>
+                    </asp:TableRow>
+                </asp:Table>
+            </li>
+            <li class="h_li"><asp:Panel ID="btn_logout" runat="server"><a class="a_menu" href="../logout.aspx"><div class="div_menu">Logout</div></a></asp:Panel></li>
+            <li class="h_li"><asp:Panel ID="btn_login" runat="server"><a class="a_menu" href="../login.aspx"><div class="div_menu">Login</div></a></asp:Panel></li>
+            
+        </ul>
+    </nav>
+    <div id="content"><asp:ContentPlaceHolder ID="cph_slide" runat="server"></asp:ContentPlaceHolder></div>
+    <div class="layout">
+        <div class="titlebar">
+            <b>PERPUSTAKAAN</b><b style="color:#f1c40f; text-shadow: 0 0px 30px #febb16;">MANGA</b>
+        </div>
+		    <div class="content">
+                    <asp:ContentPlaceHolder ID="cph_tombol" runat="server"></asp:ContentPlaceHolder>
+        	<h2 id="judul">
+                <asp:ContentPlaceHolder ID="cph_judul" runat="server"></asp:ContentPlaceHolder>
+            </h2>
+            <div class="isi"><asp:ContentPlaceHolder ID="cph_isi" runat="server"></asp:ContentPlaceHolder></div>
+        </div>
+        <div class="footer">
+        Copyright © 2014 by Faisal Emir.
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+
+
